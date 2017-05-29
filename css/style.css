@@ -3,6 +3,7 @@ body {
     margin: auto;
     font-family: "TT Prosto Sans";
 }
+
 header {
     position: fixed;
     top: 0;
@@ -10,6 +11,10 @@ header {
     display: block;
     width: 100%;
 }
+.white{
+  color: #fff;
+}
+
 h2 {
     color: #000000;
     font-size: 30px;
@@ -64,6 +69,7 @@ h2 {
 .topmenu_elements ul li {
     list-style: none;
 }
+
 .topmenu_elements ul li .active {
     border-bottom: 4px solid;
     padding: 36px 0;
@@ -119,7 +125,6 @@ h2 {
     margin: 35px;
 }
 
-
 .topban {
     background-image: url("../img/topbanner.jpg");
     height: 800px;
@@ -151,6 +156,7 @@ h2 {
 
 .game_description {
     padding-top: 160px;
+    margin-bottom: 150px;
 }
 
 .game_description h2 {
@@ -167,4 +173,61 @@ h2 {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+}
+
+.where {
+    padding: 80px 0;
+    background-image: url("../img/wherebg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.where h2{
+  margin-bottom: 40px;
+
+}
+.where h2::before{
+  content: "";
+  background-image: url(../img/wherebefore.png);
+  background-repeat: no-repeat;
+  width: 147px;
+  height: 45px;
+  display: inline-block;
+  position: relative;
+  left: -20px;
+  top: 30px;
+}
+.where h2::after{
+  content: "";
+  background-image: url(../img/whereafter.png);
+  background-repeat: no-repeat;
+  width: 147px;
+  height: 45px;
+  display: inline-block;
+  position: relative;
+  left: 20px;
+  top: 30px;
+}
+.where_variants {
+    display: flex;
+    justify-content: space-between;
+}
+
+.variant_1, .variant_2 {
+    width: 555px;
+    box-sizing: border-box;
+}
+
+.variant_toggler {
+    text-align: center;
+    display: block;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.slider {
+    background-color: #fff;
+    padding: 20px;
 }
