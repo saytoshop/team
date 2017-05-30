@@ -314,13 +314,36 @@ h2 {
 .team h2 {
     margin: 0 0 35px;
 }
-.contacts{
 
+.contacts {}
+
+.contacts .address::before, .contacts .tel::before, .contacts .email::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
 }
-.contacts h3{
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
+
+.contacts .address::before {
+    background-image: url("../img/address.png");
+}
+
+.contacts .tel::before {
+    background-image: url("../img/tel.png");
+}
+
+.contacts .email::before {
+    background-image: url("../img/email.png");
+}
+
+.contacts h3 {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
 }
 
 .contacts_elements {
@@ -335,17 +358,57 @@ h2 {
 }
 
 .contact_element_2 {
-  padding: 40px 30px;
+    padding: 30px 20px;
     box-sizing: border-box;
     width: 359px;
     border-radius: 5px;
     background-color: #f2b429;
 }
-.contacts input{
-  /* Style for "Прямоуголь" */
-width: 299px;
-height: 40px;
-border-radius: 5px;
-border: 1px solid #000000;
-background-color: #ffffff;
+
+.contacts label {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.contacts input {
+    /* Style for "Прямоуголь" */
+    width: 299px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 10px 0 30px;
+    box-sizing: border-box;
+    border: none;
+}
+
+.contacts input:focus {
+    border: 1px solid #000000;
+}
+
+.contacts button {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #e21f3d;
+    padding: 23px 0;
+    width: 166px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 40px;
+    text-decoration: none;
+    border: none;
+}
+
+.contacts textarea {
+    width: 299px;
+    height: 120px;
+    border-radius: 5px;
+    margin: 10px 0 30px;
+    box-sizing: border-box;
 }
