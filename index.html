@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/style.css">
     <title></title>
     <script type="text/javascript">
@@ -48,32 +49,38 @@
 
 <body>
     <header>
-        <div class="topmenu content">
-            <div class="brand">
-                <img src="img/logo.png" alt="">
-                <div class="brand_text">
-                    анимационно-инструкторская компания
+
+        <div class="topmenu">
+            <div class="content">
+
+
+                <div class="brand">
+                    <img src="img/logo.png" alt="">
+                    <div class="brand_text">
+                        анимационно-инструкторская компания
+                    </div>
                 </div>
-            </div>
-            <div class="topmenu_elements">
-                <ul>
-                    <li><a href="#" class="active">описание</a></li>
-                    <li><a href="#">где проводим</a></li>
-                    <li><a href="#">стоимость</a></li>
-                    <li><a href="#">команда</a></li>
-                    <li><a href="#">контакты</a></li>
-                </ul>
-            </div>
-            <div class="topmenu_contacts">
+                <div class="topmenu_elements">
+                    <ul>
+                        <li><a href="#descr" class="active">описание</a></li>
+                        <li><a href="#where">где проводим</a></li>
+                        <li><a href="#price">стоимость</a></li>
+                        <li><a href="#team">команда</a></li>
+                        <li><a href="#contacts">контакты</a></li>
+                    </ul>
+                </div>
+                <div class="topmenu_contacts">
 
-                <a class="tel" href="tel:+79255007483">+7 925 <span class="red">500-74-83</span></a>
+                    <a class="tel" href="tel:+79255007483">+7 925 <span class="red">500-74-83</span></a>
 
-                <div class="email">
-                    komanda.a@yandex.ru
+                    <div class="email">
+                        komanda.a@yandex.ru
+                    </div>
                 </div>
             </div>
         </div>
     </header>
+
     <div class="topban">
         <div class="bigheader">
             ТИМБИЛДИНГ ИГРА FARACE
@@ -81,9 +88,9 @@
         <div class="smallheader">
             ОРГАНИЗАЦИЯ КОРПОРАТИВНЫХ МЕРОПРИЯТИЙ
         </div>
-        <a href="#">Отправить заявку</a>
+        <a href="#" class="send_btn">Отправить заявку</a>
     </div>
-    <section class="game_description content">
+    <section id="descr" class="game_description content">
         <h2>Описание игры</h2>
         <div class="game_description_content">
             <div class="game_description_content_text">
@@ -97,7 +104,7 @@
 
         </div>
     </section>
-    <section class="where">
+    <section id="where">
         <h2 class="white">Где проводим</h2>
         <div class="where_variants content">
             <div class="variant_1">
@@ -122,7 +129,7 @@
             </div>
         </div>
     </section>
-    <section class="price">
+    <section id="price">
         <p>стоимость игры от <span>90 000 Р</span></p>
     </section>
     <section class="what">
@@ -158,14 +165,14 @@
             </div>
         </div>
     </section>
-    <section class="team">
+    <section id="team">
         <h2>Наша команда</h2>
         <div class="content">
             <img src="img/team.jpg" alt="">
         </div>
 
     </section>
-    <section class="contacts">
+    <section id="contacts">
         <h2>Контакты</h2>
         <div class="contacts_elements content">
             <div class="contact_element_1">
@@ -212,6 +219,43 @@
             <p><span class="light big">+7 925 500-74-83</span><br>komanda.a@yandex.ru</p>
         </div>
     </section>
+    <div id="up" onclick="window.scrollTo(0,10)">
+        <img src="img/up.png" alt="">
+    </div>
+    <script src="js/jquery-3.2.1.min.js" charset="utf-8"></script>
+    <script async type="text/javascript" src="js/script.js">
+    </script>
+    <div class="layer">
+        <div class="sendme_wrapper">
+
+
+            <div id="sendme">
+              <a href="#" class="close_layer"><img src="img/cross.png" alt=""></a>
+                <h3>Отправить заявку</h3>
+                <form class="send" action="index.html" method="post">
+                    <label>
+                <div class="">
+                  Имя
+                </div>
+                <input type="text" name="name" value="">
+            </label>
+                    <label>
+              <div class="">
+                Телефон
+              </div>
+              <input type="text" name="phone" value="">
+          </label>
+                    <label>
+            <div class="">
+              Комментарий
+            </div>
+            <textarea name="comment" ></textarea>
+        </label>
+                    <button type="submit" name="button">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

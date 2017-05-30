@@ -11,6 +11,11 @@ header {
     background: white;
     display: block;
     width: 100%;
+    max-width: 1920px;
+}
+
+img {
+    max-width: 100%;
 }
 
 .white {
@@ -45,11 +50,11 @@ h2 {
 }
 
 .content {
-    width: 1170px;
+    max-width: 1170px;
     margin: auto;
 }
 
-.topmenu {
+.topmenu .content {
     display: flex;
     -webkit-justify-content: space-around;
     justify-content: space-between;
@@ -87,6 +92,7 @@ h2 {
     text-transform: uppercase;
     text-decoration: none;
     color: #a3a3a3;
+    transition-duration: .1s;
 }
 
 .topmenu_elements a.active {
@@ -145,6 +151,7 @@ h2 {
     /* Safari */
     justify-content: center;
     margin-top: 102px;
+        background-size: cover;
 }
 
 .topban a {
@@ -181,20 +188,21 @@ h2 {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+    flex-basis: 500px;
 }
 
-.where {
+#where {
     padding: 80px 0;
     background-image: url("../img/wherebg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.where h2 {
+#where h2 {
     margin-bottom: 40px;
 }
 
-.where h2::before {
+#where h2::before {
     content: "";
     background-image: url(../img/wherebefore.png);
     background-repeat: no-repeat;
@@ -206,7 +214,7 @@ h2 {
     top: 30px;
 }
 
-.where h2::after {
+#where h2::after {
     content: "";
     background-image: url(../img/whereafter.png);
     background-repeat: no-repeat;
@@ -243,7 +251,7 @@ h2 {
     padding: 20px;
 }
 
-.price {
+#price {
     display: flex;
     margin: auto;
     font-size: 30px;
@@ -255,12 +263,12 @@ h2 {
     background-repeat: no-repeat;
 }
 
-.price p {
+#price p {
     text-transform: uppercase;
     margin: auto;
 }
 
-.price p span {
+#price p span {
     color: #f2b429;
 }
 
@@ -313,23 +321,23 @@ h2 {
     line-height: 23px;
 }
 
-.team {
-    padding: 150px 0;
+#team{
+  padding-top: 150px;
 }
 
-.team h2 {
+#team h2 {
     margin: 0 0 35px;
 }
 
-.contacts {
-    margin-bottom: 150px;
+#contacts {
+    padding:  150px 0;
 }
 
-.contacts h2 {
+#contacts h2 {
     margin-bottom: 40px;
 }
 
-.contacts .address, .contacts .tel, .contacts .email {
+#contacts .address, #contacts .tel, #contacts .email {
     position: relative;
     align-items: center;
     display: flex;
@@ -337,7 +345,7 @@ h2 {
     margin: 0 0 21px;
 }
 
-.contacts .address::before, .contacts .tel::before, .contacts .email::before {
+#contacts .address::before, #contacts .tel::before, #contacts .email::before {
     content: "";
     width: 50px;
     height: 50px;
@@ -347,19 +355,19 @@ h2 {
     position: absolute;
 }
 
-.contacts .address::before {
+#contacts .address::before {
     background-image: url("../img/address.png");
 }
 
-.contacts .tel::before {
+#contacts .tel::before {
     background-image: url("../img/tel.png");
 }
 
-.contacts .email::before {
+#contacts .email::before {
     background-image: url("../img/email.png");
 }
 
-.contacts h3 {
+#contacts h3 {
     color: #fff;
     text-transform: uppercase;
     text-align: center;
@@ -399,14 +407,14 @@ h2 {
     align-items: center;
 }
 
-.contacts label {
+label {
     color: #000000;
     font-size: 16px;
     font-weight: 400;
     line-height: 16px;
 }
 
-.contacts input {
+input {
     /* Style for "Прямоуголь" */
     width: 299px;
     height: 40px;
@@ -421,11 +429,11 @@ h2 {
     border: none;
 }
 
-.contacts input:focus {
+input:focus {
     border: 1px solid #000000;
 }
 
-.contacts button {
+button {
     color: #ffffff;
     font-size: 18px;
     font-weight: 700;
@@ -439,7 +447,7 @@ h2 {
     border: none;
 }
 
-.contacts textarea {
+textarea {
     width: 299px;
     height: 120px;
     border-radius: 5px;
@@ -461,15 +469,62 @@ h2 {
     justify-content: space-between;
     text-align: center;
 }
-.slogan{
-  margin:  0 30px;
+
+.slogan {
+    margin: 0 30px;
+}
+
+.design {
+    margin: 0 30px;
+    flex-grow: 1;
+}
+
+.big {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#up {
+    display: none;
+    position: fixed;
+    bottom: 150px;
+    right: 37px;
+    cursor: pointer;
+}
+
+.layer {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+}
+
+.sendme_wrapper {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    height: 100%;
+    align-items: center;
 
 }
-.design{
-  margin: 0 30px;
-      flex-grow: 1;
+
+#sendme {
+    padding: 0px;
+    box-sizing: border-box;
+    width: 359px;
+    border-radius: 5px;
+    background-color: #f2b429;
+    height: 552px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
-.big{
-  font-size: 18px;
-font-weight: 700;
+.close_layer{
+  position: absolute;
+  right: -60px;
 }
