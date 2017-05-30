@@ -5,14 +5,16 @@ body {
 }
 
 header {
+    z-index: 1000;
     position: fixed;
     top: 0;
     background: white;
     display: block;
     width: 100%;
 }
-.white{
-  color: #fff;
+
+.white {
+    color: #fff;
 }
 
 h2 {
@@ -181,32 +183,35 @@ h2 {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.where h2{
-  margin-bottom: 40px;
 
+.where h2 {
+    margin-bottom: 40px;
 }
-.where h2::before{
-  content: "";
-  background-image: url(../img/wherebefore.png);
-  background-repeat: no-repeat;
-  width: 147px;
-  height: 45px;
-  display: inline-block;
-  position: relative;
-  left: -20px;
-  top: 30px;
+
+.where h2::before {
+    content: "";
+    background-image: url(../img/wherebefore.png);
+    background-repeat: no-repeat;
+    width: 147px;
+    height: 45px;
+    display: inline-block;
+    position: relative;
+    left: -20px;
+    top: 30px;
 }
-.where h2::after{
-  content: "";
-  background-image: url(../img/whereafter.png);
-  background-repeat: no-repeat;
-  width: 147px;
-  height: 45px;
-  display: inline-block;
-  position: relative;
-  left: 20px;
-  top: 30px;
+
+.where h2::after {
+    content: "";
+    background-image: url(../img/whereafter.png);
+    background-repeat: no-repeat;
+    width: 147px;
+    height: 45px;
+    display: inline-block;
+    position: relative;
+    left: 20px;
+    top: 30px;
 }
+
 .where_variants {
     display: flex;
     justify-content: space-between;
@@ -230,4 +235,117 @@ h2 {
 .slider {
     background-color: #fff;
     padding: 20px;
+}
+
+.price {
+    display: flex;
+    margin: auto;
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 900;
+    height: 452px;
+    background-image: url("../img/red_flag.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.price p {
+    text-transform: uppercase;
+    margin: auto;
+}
+
+.price p span {
+    color: #f2b429;
+}
+
+.what {
+    background-color: #f2b429;
+    padding: 80px 0;
+}
+
+.what h2 {
+    padding-bottom: 100px;
+    margin-bottom: 0;
+}
+
+.what_elements {
+    display: flex;
+    justify-content: space-between;
+}
+
+.what_element {
+    /* Style for "Прямоуголь" */
+    width: 263px;
+    height: 296px;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    padding: 80px 26px 26px;
+}
+
+.what_element>img {
+    position: absolute;
+    top: -65px;
+    left: 66px;
+}
+
+.what_element h3 {
+    color: #e21f3d;
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 0 1px;
+}
+
+.what_element p {
+    height: 110px;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23px;
+}
+
+.team {
+    padding: 150px 0;
+}
+
+.team h2 {
+    margin: 0 0 35px;
+}
+.contacts{
+
+}
+.contacts h3{
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.contacts_elements {
+    display: flex;
+    justify-content: center;
+}
+
+.contact_element_1 {
+    box-sizing: border-box;
+    width: 550px;
+    margin-right: 30px;
+}
+
+.contact_element_2 {
+  padding: 40px 30px;
+    box-sizing: border-box;
+    width: 359px;
+    border-radius: 5px;
+    background-color: #f2b429;
+}
+.contacts input{
+  /* Style for "Прямоуголь" */
+width: 299px;
+height: 40px;
+border-radius: 5px;
+border: 1px solid #000000;
+background-color: #ffffff;
 }
