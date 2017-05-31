@@ -2,8 +2,16 @@ body {
     max-width: 1920px;
     margin: auto;
     font-family: "TT Prosto Sans";
-}
 
+}
+.bg{
+  background-image: url("../img/1170.psd.png");
+      background-size: initial;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y:0;
+  opacity: 0.5;
+}
 header {
     z-index: 1000;
     position: fixed;
@@ -24,6 +32,8 @@ img {
 
 .light {
     color: #f2b429;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 h2 {
@@ -53,6 +63,7 @@ h2 {
     max-width: 1170px;
     margin: auto;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .topmenu .content {
@@ -131,13 +142,14 @@ h2 {
     font-size: 14px;
 }
 
-.bigheader {
+h1 {
     color: #ffffff;
     font-size: 48px;
     font-weight: 900;
     text-transform: uppercase;
     width: 390px;
     margin: 0 auto;
+        line-height: 1.2;
 }
 
 .smallheader {
@@ -145,7 +157,7 @@ h2 {
     font-size: 26px;
     font-weight: 900;
     text-transform: uppercase;
-    margin: 35px;
+    margin: 20px;
 }
 
 .topban {
@@ -165,11 +177,9 @@ h2 {
     -ms-flex-pack: center;
     justify-content: center;
     margin-top: 102px;
-
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .topban a {
@@ -177,9 +187,7 @@ h2 {
     font-size: 18px;
     font-weight: 700;
     background-color: #f2b429;
-    padding: 23px 35px;
-    background-color: #f2b429;
-    padding: 23px 0;
+    padding: 20px 0;
     width: 242px;
     display: block;
     margin: 0 auto;
@@ -209,18 +217,19 @@ h2 {
     font-weight: 400;
     line-height: 24px;
     -ms-flex-preferred-size: 500px;
-    flex-basis: 500px;
+    flex-basis: 490px;
+padding-left: 15px;
 }
 
 #where {
-    padding: 80px 0;
+    padding: 25px 0;
     background-image: url("../img/wherebg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #where h2 {
-    margin-bottom: 40px;
+    margin-bottom: 33px;
 }
 
 #where h2::before {
@@ -231,7 +240,7 @@ h2 {
     height: 45px;
     display: inline-block;
     position: relative;
-    left: -20px;
+    left: -10px;
     top: 30px;
 }
 
@@ -243,7 +252,7 @@ h2 {
     height: 45px;
     display: inline-block;
     position: relative;
-    left: 20px;
+    left: 10px;
     top: 30px;
 }
 
@@ -255,11 +264,14 @@ h2 {
     -ms-flex-pack: justify;
     justify-content: space-between;
 }
-
+.where_variants.content {
+    padding: 0 15px;
+}
 .variant_1, .variant_2 {
     width: 555px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    border-radius: 5px 4px 4px 5px;
 }
 
 .variant_toggler {
@@ -272,7 +284,7 @@ h2 {
     margin-bottom: 15px;
 }
 
-.slider {
+.slider_wrapper {
     background-color: #fff;
     padding: 20px;
 }
@@ -286,7 +298,7 @@ h2 {
     color: #ffffff;
     font-weight: 900;
     height: 452px;
-    background-image: url("../img/red_flag.jpg");
+    background-image: url("../img/red_flag.png");
     background-position: center;
     background-repeat: no-repeat;
     background-color: #f1f1f1;
@@ -295,6 +307,7 @@ h2 {
 #price p {
     text-transform: uppercase;
     margin: auto;
+    padding-bottom: 20px;
 }
 
 #price p span {
@@ -411,6 +424,7 @@ h2 {
     text-align: center;
     margin-bottom: 30px;
     font-size: 24px;
+    font-weight: 900;
 }
 
 .contacts_elements {
@@ -543,7 +557,7 @@ textarea {
     flex-grow: 1;
 }
 
-.big {
+h3 .big {
     font-size: 18px;
     font-weight: 700;
 }
@@ -605,4 +619,29 @@ textarea {
 .close_layer {
     position: absolute;
     right: -60px;
+}
+
+.fotorama__nav-wrap {
+    position: absolute;
+    z-index: 100;
+    bottom: 20px;
+}
+
+.fotorama__dot {
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: relative;
+    top: 12px;
+    left: 6px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.fotorama__nav__frame.fotorama__active .fotorama__dot {
+    width: 10px;
+    height: 10px;
+    border-width: 0;
+    background-color: #fff;
 }

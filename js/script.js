@@ -15,6 +15,7 @@ $(document).ready(function() {
         $(".layer").hide();
     });
 
+      $('.slider').fotorama();
 
     var menu_selector = ".topmenu_elements"; // Переменная должна содержать название класса или идентификатора, обертки нашего меню.
 
