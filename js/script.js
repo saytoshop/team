@@ -16,7 +16,7 @@ $(document).ready(function() {
     });
 
 
-    var menu_selector = ".topmenu"; // Переменная должна содержать название класса или идентификатора, обертки нашего меню.
+    var menu_selector = ".topmenu_elements"; // Переменная должна содержать название класса или идентификатора, обертки нашего меню.
 
     function onScroll() {
         var scroll_top = $(document).scrollTop()+100;
