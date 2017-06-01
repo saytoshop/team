@@ -2,16 +2,17 @@ body {
     max-width: 1920px;
     margin: auto;
     font-family: "TT Prosto Sans";
+}
 
+.bg {
+    background-image: url("../img/1170.psd.png");
+    background-size: initial;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 0;
+    opacity: 0.5;
 }
-.bg{
-  background-image: url("../img/1170.psd.png");
-      background-size: initial;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-position-y:0;
-  opacity: 0.5;
-}
+
 header {
     z-index: 1000;
     position: fixed;
@@ -149,7 +150,7 @@ h1 {
     text-transform: uppercase;
     width: 390px;
     margin: 0 auto;
-        line-height: 1.2;
+    line-height: 1.2;
 }
 
 .smallheader {
@@ -218,11 +219,11 @@ h1 {
     line-height: 24px;
     -ms-flex-preferred-size: 500px;
     flex-basis: 490px;
-padding-left: 15px;
+    padding-left: 15px;
 }
 
 #where {
-    padding: 25px 0;
+    padding: 25px 0 150px;
     background-image: url("../img/wherebg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -232,28 +233,31 @@ padding-left: 15px;
     margin-bottom: 33px;
 }
 
-#where h2::before {
+#where h2::before, #where h2::after {
     content: "";
-    background-image: url(../img/wherebefore.png);
     background-repeat: no-repeat;
     width: 147px;
     height: 45px;
     display: inline-block;
     position: relative;
-    left: -10px;
     top: 30px;
 }
 
+#where h2::before {
+    left: -10px;
+    background-image: url(../img/wherebefore.png);
+}
+
 #where h2::after {
-    content: "";
     background-image: url(../img/whereafter.png);
-    background-repeat: no-repeat;
-    width: 147px;
-    height: 45px;
-    display: inline-block;
-    position: relative;
     left: 10px;
-    top: 30px;
+}
+
+.where_headers {
+    display: flex;
+    justify-content: space-between;
+    width: 750px;
+    margin: auto;
 }
 
 .where_variants {
@@ -264,10 +268,12 @@ padding-left: 15px;
     -ms-flex-pack: justify;
     justify-content: space-between;
 }
+
 .where_variants.content {
     padding: 0 15px;
 }
-.variant_1, .variant_2 {
+
+#variant_1, #variant_2 {
     width: 555px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -293,6 +299,7 @@ padding-left: 15px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    align-items: center;
     margin: auto;
     font-size: 30px;
     color: #ffffff;
@@ -320,7 +327,6 @@ padding-left: 15px;
 }
 
 .what h2 {
-    padding-bottom: 100px;
     margin-bottom: 0;
 }
 
@@ -328,6 +334,7 @@ padding-left: 15px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    flex-wrap: wrap;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -344,6 +351,7 @@ padding-left: 15px;
     text-align: center;
     position: relative;
     padding: 80px 26px 26px;
+    margin-top: 100px;
 }
 
 .what_element>img {
@@ -644,4 +652,136 @@ h3 .big {
     height: 10px;
     border-width: 0;
     background-color: #fff;
+}
+
+
+/*------------------------- media ---------------------------*/
+
+@media (max-width: 1170px) {
+    .topmenu .content {
+        justify-content: space-around;
+        padding: 0 22px;
+    }
+    .topmenu_elements {
+        width: 50px;
+        height: 50px;
+        border-radius: 4px;
+        background-color: #f2b429;
+        order: 3;
+        cursor: pointer;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYAQAAAADIDABVAAAAAnRSTlMAAHaTzTgAAAATSURBVHjaY/j//z8DCBMDyFALAF0tEe+yq+MwAAAAAElFTkSuQmCC');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: initial;
+    }
+    .brand {
+        flex-grow: 10;
+    }
+    .topmenu_contacts {
+        flex-grow: 1;
+    }
+    .topmenu_elements:focus ul, .topmenu_elements:active ul, .topmenu_elements:hover ul {
+        right: 0;
+    }
+    .topmenu_elements ul {
+        top: 0;
+        flex-direction: column;
+        position: fixed;
+        width: 248px;
+        background-color: #f2b529;
+        right: -250px;
+        height: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 34px;
+        box-sizing: border-box;
+        -webkit-transition: .5s;
+        transition: .5s;
+    }
+    .topmenu_elements a {
+        padding: 10px 0;
+        color: #fff;
+        line-height: 50px;
+    }
+    .topmenu_elements a:hover {
+        color: #e4213f;
+    }
+    .topmenu_elements ul li .active {
+        border-bottom: none;
+    }
+    .topban {
+        height: auto;
+        padding: 150px 0;
+        background-size: cover;
+    }
+    .what_elements {
+        flex-basis: 400px;
+        justify-content: space-around;
+        max-width: 780px;
+    }
+    .game_description_content {
+        flex-direction: column-reverse;
+        max-width: 570px;
+        margin: auto;
+    }
+    .game_description_content_text {
+        padding: 70px 0 0 0;
+        flex-basis: 0;
+    }
+    .game_description {}
+    #where h2::before, #where h2::after {
+        content: none;
+    }
+    .where_variants {
+        justify-content: center;
+    }
+    .where_headers {
+        max-width: 400px;
+    }
+    .variant {
+        display: none;
+    }
+    .variant.active {
+        display: flex;
+    }
+    .variant_toggler {
+        cursor: pointer;
+        padding: 12px 23px;
+    }
+    .variant_toggler {
+        color: #ffffff;
+        background-color: #98bcdb;
+        cursor: pointer;
+        padding: 12px 23px;
+        font-size: 18px;
+        font-weight: 700;
+        border-radius: 30px;
+        border: 2px solid #ffffff;
+    }
+    .variant_toggler.active {
+        color: #98bcdb;
+        background-color: #ffffff;
+    }
+    #team {
+        padding: 150px 20px 0;
+    }
+    .contact_element_2 {
+        flex-shrink: 0;
+    }
+    .contact_element_1 {
+        flex-shrink: 1;
+        width: auto;
+    }
+    iframe {
+        max-width: 100%;
+    }
+    .contacts_elements {
+        padding: 0 20px;
+    }
+    .design {
+        display: none;
+    }
+    .footer {
+        padding: 0 20px;
+    }
 }

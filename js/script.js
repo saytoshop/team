@@ -15,15 +15,15 @@ $(document).ready(function() {
         $(".layer").hide();
     });
 
-      $('.slider').fotorama();
+    $('.slider').fotorama();
 
     var menu_selector = ".topmenu_elements"; // Переменная должна содержать название класса или идентификатора, обертки нашего меню.
 
     function onScroll() {
-        var scroll_top = $(document).scrollTop()+100;
+        var scroll_top = $(document).scrollTop() + 100;
         $(menu_selector + " a").each(function() {
             var hash = $(this).attr("href");
-            if(hash.substring(0,3)=="tel") return;
+            if (hash.substring(0, 3) == "tel") return;
             var target = $(hash);
             if (target.position().top <= scroll_top && target.position().top + target.outerHeight() > scroll_top) {
                 $(menu_selector + " a.active").removeClass("active");
@@ -32,12 +32,13 @@ $(document).ready(function() {
                 $(this).removeClass("active");
             }
         });
+
     }
 
 
     $(document).on("scroll", onScroll);
 
-    $(menu_selector+" a").click(function(e) {
+    $(menu_selector + " a").click(function(e) {
         e.preventDefault();
 
         $(document).off("scroll");
@@ -55,5 +56,11 @@ $(document).ready(function() {
         $(this).addClass("active");
 
 
+    });
+
+    $(".variant_toggler").click(function(e) {
+      if($(this).hasClass("active")) return;
+        $(".variant").toggleClass('active');
+        $(".variant_toggler").toggleClass('active');
     });
 });

@@ -62,7 +62,7 @@
                         анимационно-инструкторская компания
                     </div>
                 </div>
-                <div class="topmenu_elements">
+                <div class="topmenu_elements" tabindex="1">
                     <ul>
                         <li><a href="#descr" class="active">описание</a></li>
                         <li><a href="#where">где проводим</a></li>
@@ -108,9 +108,41 @@
     </section>
     <section id="where">
         <h2 class="white">Где проводим</h2>
+        <div class="where_headers ">
+            <span data-id="#variant_1" href="#" class="variant_toggler active">На природе</span>
+            <span data-id="#variant_2" href="#" class="variant_toggler">В помещениях</span>
+        </div>
         <div class="where_variants content">
-            <div class="variant_1">
-                <a href="#" class="variant_toggler">На природе</a>
+            <div id="variant_1" class="variant active">
+
+                <div class="slider_wrapper">
+                    <div class="slider">
+
+                        <img src="img/out/1.jpg" alt="">
+                        <a href="img/out/2.jpg"></a>
+                        <a href="img/out/3.jpg"></a>
+                        <a href="img/out/4.jpg"></a>
+                        <a href="img/out/5.jpg"></a>
+                        <a href="img/out/6.jpg"></a>
+                        <a href="img/out/7.jpg"></a>
+                        <a href="img/out/8.jpg"></a>
+                        <a href="img/out/9.jpg"></a>
+                        <a href="img/out/10.jpg"></a>
+                        <a href="img/out/11.jpg"></a>
+                        <a href="img/out/12.jpg"></a>
+                        <a href="img/out/13.jpg"></a>
+                        <a href="img/out/14.jpg"></a>
+                        <a href="img/out/15.jpg"></a>
+                        <a href="img/out/16.jpg"></a>
+                        <a href="img/out/17.jpg"></a>
+                    </div>
+                    <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate
+                        cursus a sit amet mauris. Morbi accumsan ipsum velit. </p>
+                </div>
+            </div>
+
+            <div id="variant_2" class="variant">
+
                 <div class="slider_wrapper">
                     <div class="slider">
                         <img src="img/in/1.jpg" alt="">
@@ -130,33 +162,6 @@
                         <a href="img/in/15.jpg"></a>
                         <a href="img/in/16.jpg"></a>
                         <a href="img/in/17.jpg"></a>
-                    </div>
-                    <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate
-                        cursus a sit amet mauris. Morbi accumsan ipsum velit. </p>
-                </div>
-            </div>
-
-            <div class="variant_2">
-                <a href="#" class="variant_toggler">В помещениях</a>
-                <div class="slider_wrapper">
-                    <div class="slider">
-                        <img src="img/out/1.jpg" alt="">
-                        <a href="img/out/2.jpg"></a>
-                        <a href="img/out/3.jpg"></a>
-                        <a href="img/out/4.jpg"></a>
-                        <a href="img/out/5.jpg"></a>
-                        <a href="img/out/6.jpg"></a>
-                        <a href="img/out/7.jpg"></a>
-                        <a href="img/out/8.jpg"></a>
-                        <a href="img/out/9.jpg"></a>
-                        <a href="img/out/10.jpg"></a>
-                        <a href="img/out/11.jpg"></a>
-                        <a href="img/out/12.jpg"></a>
-                        <a href="img/out/13.jpg"></a>
-                        <a href="img/out/14.jpg"></a>
-                        <a href="img/out/15.jpg"></a>
-                        <a href="img/out/16.jpg"></a>
-                        <a href="img/out/17.jpg"></a>
                     </div>
                     <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate
                         cursus a sit amet mauris. Morbi accumsan ipsum velit. </p>
@@ -215,7 +220,7 @@
                 <p class="tel">+ 7 925 500-74-83 <br>с 9:00 до 21:00</p>
                 <p class="email">komanda.a@yandex.ru</p>
                 <div class="map">
-                    <img src="img/map.jpg" alt="">
+                    <iframe src="https://api-maps.yandex.ru/frame/v1/-/CBQIzTVaTA" width="555" height="322" frameborder="0"></iframe>
                 </div>
             </div>
             <div class="contact_element_2">
