@@ -4,6 +4,10 @@ body {
     font-family: "TT Prosto Sans";
 }
 
+.mobile {
+    display: none;
+}
+
 .bg {
     background-image: url("../img/1170.psd.png");
     background-size: initial;
@@ -31,7 +35,7 @@ img {
     color: #fff;
 }
 
-.light {
+.footer .light {
     color: #f2b429;
     font-size: 18px;
     font-weight: 700;
@@ -108,11 +112,19 @@ h2 {
     margin: 0;
     height: 100%;
     align-items: center;
+    padding: 50px 0 0;
 }
 
 .topmenu_elements ul li {
     list-style: none;
-    height: 100%;
+    height: auto;
+}
+
+.menu_closer {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
 }
 
 .topmenu_elements ul li .active {
@@ -415,6 +427,7 @@ h1 {
 #contacts {
     padding-top: 50px;
     margin-top: 100px;
+    margin-bottom: 150px;
 }
 
 #contacts h2 {
@@ -460,7 +473,7 @@ h1 {
     background-image: url("../img/email.png");
 }
 
-.contact_element_2  h3 {
+.contact_element_2 h3 {
     color: #fff;
     text-transform: uppercase;
     text-align: center;
@@ -489,6 +502,7 @@ h1 {
     position: relative;
     height: 552px;
 }
+
 form.send {
     display: flex;
     flex-direction: column;
@@ -522,7 +536,7 @@ form.send {
 }
 
 label {
-    color: rgba(0,0,0,0.6);
+    color: rgba(0, 0, 0, 0.6);
     font-size: 16px;
     font-weight: 400;
     line-height: 14px;
@@ -538,13 +552,12 @@ input {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-        margin: 10px 0 20px;
+    margin: 10px 0 20px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border: none;
     outline: none;
     padding: 0 10px;
-
 }
 
 textarea {
@@ -726,7 +739,7 @@ h3 .big {
         -ms-flex-positive: 1;
         flex-grow: 1;
     }
-    .topmenu_elements:focus ul, .topmenu_elements:active ul, .topmenu_elements:hover ul {
+    .topmenu_elements.open ul {
         right: 0;
     }
     .topmenu_elements ul {
@@ -858,21 +871,30 @@ h3 .big {
     }
     h1 {
         font-size: 34px;
+        max-width: 300px;
     }
     h2 {
         line-height: 1;
     }
     .game_description {
         padding-top: 75px;
+        margin-top: 0;
     }
     .game_description_content {
         padding: 0 16px;
     }
+    .game_description_content_text {
+        padding-top: 40px;
+    }
+    #where {
+        margin-top: 75px;
+    }
     .where_headers {
-        max-width: 320px;
+        max-width: 300px;
     }
     .variant_toggler {
         font-size: 14px;
+        padding: 12px 19px;
     }
     #variant_1, #variant_2 {
         width: 300px;
@@ -883,5 +905,122 @@ h3 .big {
     }
     #where {
         padding: 25px 0 50px;
+    }
+    #price {
+        background-image: url(../img/small_flag.png);
+        height: 350px;
+    }
+    #price p {
+        text-transform: uppercase;
+        margin: auto;
+        padding-bottom: 0;
+        max-width: 250px;
+    }
+    .what h2 {
+        margin: 0;
+    }
+    .what_element {
+        width: 290px;
+        padding: 80px 22px 26px;
+    }
+    .what_element>img {
+        left: 80px;
+    }
+    #team {
+        margin-top: 0;
+        padding: 75px 0 0 0;
+    }
+    #team h2 {
+        max-width: 250px;
+        margin: 0 auto 35px;
+    }
+    #contacts {
+        margin-top: 0;
+        margin-bottom: 75px;
+        padding: 75px 15px 0;
+    }
+    #contacts h2 {
+        margin-top: 0;
+    }
+    .contact_element_2 {
+        -ms-flex-negative: 1;
+        flex-shrink: 1;
+    }
+    .contact_element_2 h3 {
+        line-height: 26px;
+        padding: 38px;
+    }
+    input, textarea {
+        width: 230px;
+    }
+    .contacts_elements.content {
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    .contact_element_1 {
+        order: 2;
+        margin: 45px 0 0;
+    }
+    .contact_element_2 button {
+        margin-bottom: 40px;
+    }
+    .footer .content {
+        flex-direction: column;
+        padding: 33px 0 43px;
+    }
+    .footer {
+        height: auto;
+    }
+    .design {
+        display: block;
+        order: 4;
+    }
+    .tm {
+        padding: 35px 0;
+        margin: 0;
+    }
+    .topmenu_elements ul {
+        width: 100%;
+        padding-left: 0;
+        align-items: center;
+        right: -100%;
+    }
+    .mobile {
+        display: block;
+    }
+    .mobile .topmenu_contacts {
+        display: block;
+        margin-top: 50px;
+    }
+    .mobile .topmenu_contacts .email a {
+        padding: 0;
+        text-transform: none;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+    .mobile .send_btn {
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 700;
+        background-color: #e21f3d;
+        padding: 20px 35px;
+        display: block;
+        margin: 50px auto;
+        border-radius: 40px;
+        text-decoration: none;
+        text-transform: none;
+        line-height: 18px;
+    }
+    #sendme {
+        width: 300px;
+        height: auto;
+    }
+    #sendme h3 {
+        padding: 20px;
+    }
+    .close_layer {
+        right: 5px;
+        top: 5px;
     }
 }

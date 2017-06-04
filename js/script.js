@@ -40,7 +40,8 @@ $(document).ready(function() {
 
     $(document).on("scroll", onScroll);
 
-    $(menu_selector + " a").click(function(e) {
+    $(menu_selector + ".menu_element a").click(function(e) {
+      
         e.preventDefault();
 
         $(document).off("scroll");
@@ -65,4 +66,16 @@ $(document).ready(function() {
         $(".variant").toggleClass('active');
         $(".variant_toggler").toggleClass('active');
     });
+    $(".topmenu_elements").click(function(e) {
+      if(e.target.className!="topmenu_elements") return;
+        $(".topmenu_elements").addClass("open");
+    });
+    $(".menu_closer").click(function(e) {
+        $(".topmenu_elements").removeClass("open");
+    });
+    $(".menu_element a").click(function(e) {
+        $(".topmenu_elements").removeClass("open");
+    });
+
+
 });
