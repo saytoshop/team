@@ -64,7 +64,14 @@ h2 {
     max-width: 1170px;
     margin: auto;
     width: 100%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.topmenu.shadow {
+    -webkit-box-shadow: 0px 20px 86px -22px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 20px 86px -22px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 20px 86px -22px rgba(0, 0, 0, 0.75);
 }
 
 .topmenu .content {
@@ -82,10 +89,12 @@ h2 {
 
 .topmenu_elements {
     width: 591px;
-    height: 12px;
     font-family: "TT Prosto Sans";
     font-size: 14px;
     font-weight: 900;
+    height: 100%;
+    align-items: center;
+    display: flex;
 }
 
 .topmenu_elements ul {
@@ -97,15 +106,18 @@ h2 {
     width: 100%;
     padding: 0;
     margin: 0;
+    height: 100%;
+    align-items: center;
 }
 
 .topmenu_elements ul li {
     list-style: none;
+    height: 100%;
 }
 
 .topmenu_elements ul li .active {
     border-bottom: 4px solid;
-    padding: 36px 0;
+    padding: 40px 0;
 }
 
 .topmenu_elements a {
@@ -114,13 +126,15 @@ h2 {
     color: #a3a3a3;
     -webkit-transition-duration: .1s;
     transition-duration: .1s;
+    padding: 40px 0;
+    line-height: 102px;
 }
 
-.topmenu_elements a.active {
+.topmenu_elements a.active, .topmenu_elements a:hover {
     color: #e21f3d;
 }
 
-.topmenu_contacts a {
+.topmenu_contacts .tel {
     font-family: "TT Prosto Sans";
     font-size: 24px;
     font-weight: 400;
@@ -137,10 +151,11 @@ h2 {
     text-align: center;
 }
 
-.topmenu_contacts .email {
+.topmenu_contacts .email a {
     height: 14px;
     color: #000000;
     font-size: 14px;
+    text-decoration: none;
 }
 
 h1 {
@@ -197,8 +212,9 @@ h1 {
 }
 
 .game_description {
-    padding-top: 160px;
-    margin-bottom: 150px;
+    margin-top: 100px;
+    padding-top: 60px;
+    margin-bottom: 50px;
 }
 
 .game_description h2 {
@@ -223,6 +239,7 @@ h1 {
 }
 
 #where {
+    margin-top: 200px;
     padding: 25px 0 150px;
     background-image: url("../img/wherebg.jpg");
     background-repeat: no-repeat;
@@ -254,7 +271,11 @@ h1 {
 }
 
 .where_headers {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     width: 750px;
     margin: auto;
@@ -274,7 +295,7 @@ h1 {
 }
 
 #variant_1, #variant_2 {
-    width: 555px;
+    max-width: 555px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 5px 4px 4px 5px;
@@ -293,13 +314,18 @@ h1 {
 .slider_wrapper {
     background-color: #fff;
     padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
 }
 
 #price {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    text-align: center;
     margin: auto;
     font-size: 30px;
     color: #ffffff;
@@ -334,6 +360,7 @@ h1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -377,7 +404,8 @@ h1 {
 }
 
 #team {
-    padding-top: 150px;
+    padding-top: 50px;
+    margin-top: 100px;
 }
 
 #team h2 {
@@ -385,7 +413,8 @@ h1 {
 }
 
 #contacts {
-    padding: 150px 0;
+    padding-top: 50px;
+    margin-top: 100px;
 }
 
 #contacts h2 {
@@ -402,6 +431,11 @@ h1 {
     display: flex;
     height: 50px;
     margin: 0 0 21px;
+}
+
+#contacts .email a {
+    color: #000;
+    text-decoration: none;
 }
 
 #contacts .address::before, #contacts .tel::before, #contacts .email::before {
@@ -426,13 +460,15 @@ h1 {
     background-image: url("../img/email.png");
 }
 
-#contacts h3 {
+.contact_element_2  h3 {
     color: #fff;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 30px;
     font-size: 24px;
     font-weight: 900;
+    margin: 0;
+    line-height: 97px;
 }
 
 .contacts_elements {
@@ -453,6 +489,10 @@ h1 {
     position: relative;
     height: 552px;
 }
+form.send {
+    display: flex;
+    flex-direction: column;
+}
 
 .map {
     margin: 39px 0 0 -70px;
@@ -468,7 +508,7 @@ h1 {
     width: 359px;
     border-radius: 5px;
     background-color: #f2b429;
-    height: 552px;
+    /*height: 552px;*/
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -482,10 +522,10 @@ h1 {
 }
 
 label {
-    color: #000000;
+    color: rgba(0,0,0,0.6);
     font-size: 16px;
     font-weight: 400;
-    line-height: 16px;
+    line-height: 14px;
 }
 
 input {
@@ -498,13 +538,23 @@ input {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    margin: 10px 0 30px;
+        margin: 10px 0 20px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border: none;
+    outline: none;
+    padding: 0 10px;
+
 }
 
-input:focus {
+textarea {
+    border: none;
+    outline: none;
+    padding: 10px;
+    resize: none;
+}
+
+input:focus, textarea:focus {
     border: 1px solid #000000;
 }
 
@@ -526,7 +576,7 @@ textarea {
     width: 299px;
     height: 120px;
     border-radius: 5px;
-    margin: 10px 0 30px;
+    margin: 10px 0 40px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -552,6 +602,11 @@ textarea {
     -ms-flex-pack: justify;
     justify-content: space-between;
     text-align: center;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
 }
 
 .slogan {
@@ -604,23 +659,7 @@ h3 .big {
 }
 
 #sendme {
-    padding: 0px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 359px;
-    border-radius: 5px;
-    background-color: #f2b429;
     height: 552px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     position: relative;
 }
 
@@ -659,6 +698,7 @@ h3 .big {
 
 @media (max-width: 1170px) {
     .topmenu .content {
+        -ms-flex-pack: distribute;
         justify-content: space-around;
         padding: 0 22px;
     }
@@ -667,6 +707,8 @@ h3 .big {
         height: 50px;
         border-radius: 4px;
         background-color: #f2b429;
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
         order: 3;
         cursor: pointer;
         background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYAQAAAADIDABVAAAAAnRSTlMAAHaTzTgAAAATSURBVHjaY/j//z8DCBMDyFALAF0tEe+yq+MwAAAAAElFTkSuQmCC');
@@ -675,9 +717,13 @@ h3 .big {
         background-size: initial;
     }
     .brand {
+        -webkit-box-flex: 10;
+        -ms-flex-positive: 10;
         flex-grow: 10;
     }
     .topmenu_contacts {
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
         flex-grow: 1;
     }
     .topmenu_elements:focus ul, .topmenu_elements:active ul, .topmenu_elements:hover ul {
@@ -685,15 +731,23 @@ h3 .big {
     }
     .topmenu_elements ul {
         top: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         position: fixed;
         width: 248px;
         background-color: #f2b529;
         right: -250px;
         height: 100%;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: flex-start;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
         align-items: flex-start;
         padding-left: 34px;
+        -webkit-box-sizing: border-box;
         box-sizing: border-box;
         -webkit-transition: .5s;
         transition: .5s;
@@ -715,17 +769,23 @@ h3 .big {
         background-size: cover;
     }
     .what_elements {
+        -ms-flex-preferred-size: 400px;
         flex-basis: 400px;
+        -ms-flex-pack: distribute;
         justify-content: space-around;
         max-width: 780px;
     }
     .game_description_content {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
         flex-direction: column-reverse;
         max-width: 570px;
         margin: auto;
     }
     .game_description_content_text {
         padding: 70px 0 0 0;
+        -ms-flex-preferred-size: 0;
         flex-basis: 0;
     }
     .game_description {}
@@ -733,6 +793,8 @@ h3 .big {
         content: none;
     }
     .where_variants {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
     .where_headers {
@@ -742,6 +804,8 @@ h3 .big {
         display: none;
     }
     .variant.active {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
     .variant_toggler {
@@ -766,9 +830,11 @@ h3 .big {
         padding: 150px 20px 0;
     }
     .contact_element_2 {
+        -ms-flex-negative: 0;
         flex-shrink: 0;
     }
     .contact_element_1 {
+        -ms-flex-negative: 1;
         flex-shrink: 1;
         width: auto;
     }
@@ -783,5 +849,39 @@ h3 .big {
     }
     .footer {
         padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .topmenu_contacts, .smallheader {
+        display: none;
+    }
+    h1 {
+        font-size: 34px;
+    }
+    h2 {
+        line-height: 1;
+    }
+    .game_description {
+        padding-top: 75px;
+    }
+    .game_description_content {
+        padding: 0 16px;
+    }
+    .where_headers {
+        max-width: 320px;
+    }
+    .variant_toggler {
+        font-size: 14px;
+    }
+    #variant_1, #variant_2 {
+        width: 300px;
+    }
+    .slider_wrapper {
+        width: 300px;
+        margin: auto;
+    }
+    #where {
+        padding: 25px 0 50px;
     }
 }

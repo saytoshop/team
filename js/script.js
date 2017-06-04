@@ -21,6 +21,8 @@ $(document).ready(function() {
 
     function onScroll() {
         var scroll_top = $(document).scrollTop() + 100;
+        if(scroll_top>200) {$(".topmenu").addClass("shadow"); }
+        else $(".topmenu").removeClass("shadow");
         $(menu_selector + " a").each(function() {
             var hash = $(this).attr("href");
             if (hash.substring(0, 3) == "tel") return;
@@ -48,7 +50,7 @@ $(document).ready(function() {
         var target = $(hash);
 
         $("html, body").animate({
-            scrollTop: target.offset().top
+            scrollTop: target.offset().top - 100
         }, 500, function() {
             window.location.hash = hash;
             $(document).on("scroll", onScroll);

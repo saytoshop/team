@@ -57,8 +57,8 @@
 
 
                 <div class="brand">
-                    <img src="img/logo.png" alt="">
-                    <div class="brand_text">
+                    <img src="img/logo.png" alt="" onclick="window.scrollTo(0,10)">
+                    <div class="brand_text" onclick="window.scrollTo(0,10)">
                         анимационно-инструкторская компания
                     </div>
                 </div>
@@ -76,7 +76,7 @@
                     <a class="tel" href="tel:+79255007483">+7 925 <span class="red">500-74-83</span></a>
 
                     <div class="email">
-                        komanda.a@yandex.ru
+                        <a href="mailto:komanda.a@yandex.ru">komanda.a@yandex.ru</a>
                     </div>
                 </div>
             </div>
@@ -85,7 +85,7 @@
 
     <div class="topban">
         <h1>
-            ТИМБИЛДИНГ ИГРА FARACE
+            ТИМБИЛДИНГ ИГРА&nbsp;FARACE
         </h1>
         <div class="smallheader">
             ОРГАНИЗАЦИЯ КОРПОРАТИВНЫХ МЕРОПРИЯТИЙ
@@ -116,7 +116,7 @@
             <div id="variant_1" class="variant active">
 
                 <div class="slider_wrapper">
-                    <div class="slider">
+                    <div class="slider" data-fit="scaledown">
 
                         <img src="img/out/1.jpg" alt="">
                         <a href="img/out/2.jpg"></a>
@@ -170,7 +170,7 @@
             </div>
     </section>
     <section id="price">
-        <p>стоимость игры от <span>90 000 Р</span></p>
+        <p>стоимость игры от <span>90&nbsp;000 Р</span></p>
     </section>
     <section class="what">
         <h2>Что входит в программу</h2>
@@ -218,30 +218,24 @@
             <div class="contact_element_1">
                 <p class="address">г. Москва, ул. Александра Солженицына,<br> дом 30, стр. 1</p>
                 <p class="tel">+ 7 925 500-74-83 <br>с 9:00 до 21:00</p>
-                <p class="email">komanda.a@yandex.ru</p>
+                <p class="email"> <a href="mailto:komanda.a@yandex.ru">komanda.a@yandex.ru</a></p>
                 <div class="map">
                     <iframe src="https://api-maps.yandex.ru/frame/v1/-/CBQIzTVaTA" width="555" height="322" frameborder="0"></iframe>
                 </div>
             </div>
-            <div class="contact_element_2">
+            <div class="contact_element_2 send_form" >
                 <h3>Отправить заявку</h3>
                 <form class="send" action="index.html" method="post">
                     <label>
-                      <div class="">
-                        Имя
-                      </div>
+                        Имя <br>
                       <input type="text" name="name" value="">
                   </label>
                     <label>
-                    <div class="">
-                      Телефон
-                    </div>
+                      Телефон или емайл<br>
                     <input type="text" name="phone" value="">
                 </label>
                     <label>
-                  <div class="">
-                    Комментарий
-                  </div>
+                    Комментарий <br>
                   <textarea name="comment" ></textarea>
               </label>
                     <button type="submit" name="button">Отправить</button>
@@ -255,8 +249,8 @@
 
             <img src="img/logowhite.png" alt="">
             <p class="slogan">анимационно-конструкторская <br> компания</p>
-            <p class="design"><span class="light">Дизайн</span> – gromqo@gmail.com</p>
-            <p><span class="light big">+7 925 500-74-83</span><br>komanda.a@yandex.ru</p>
+            <p class="design"><span class="light">Дизайн</span> – <a href="mailto:gromqo@gmail.com">gromqo@gmail.com</a></p>
+            <p><span class="light big">+7 925 500-74-83</span><br> <a href="mailto:komanda.a@yandex.ru">komanda.a@yandex.ru</a></p>
         </div>
     </section>
     <div id="up" onclick="window.scrollTo(0,10)">
@@ -270,26 +264,20 @@
         <div class="sendme_wrapper">
 
 
-            <div id="sendme">
+            <div id="sendme" class="contact_element_2 ">
                 <a href="#" class="close_layer"><img src="img/cross.png" alt=""></a>
                 <h3>Отправить заявку</h3>
                 <form class="send" action="index.html" method="post">
                     <label>
-                <div class="">
-                  Имя
-                </div>
+                  Имя <br>
                 <input type="text" name="name" value="">
             </label>
                     <label>
-              <div class="">
-                Телефон
-              </div>
+                Телефон или email <br>
               <input type="text" name="phone" value="">
           </label>
                     <label>
-            <div class="">
-              Комментарий
-            </div>
+              Комментарий <br>
             <textarea name="comment" ></textarea>
         </label>
                     <button type="submit" name="button">Отправить</button>
