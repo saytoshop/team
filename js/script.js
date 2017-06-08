@@ -21,11 +21,14 @@ $(document).ready(function() {
 
     function onScroll() {
         var scroll_top = $(document).scrollTop() + 100;
-        if(scroll_top>200) {$(".topmenu").addClass("shadow"); }
-        else $(".topmenu").removeClass("shadow");
+        if (scroll_top > 200) {
+            $(".topmenu").addClass("shadow");
+        } else $(".topmenu").removeClass("shadow");
         $(menu_selector + " a").each(function() {
             var hash = $(this).attr("href");
+            if (hash == "#") return;
             if (hash.substring(0, 3) == "tel") return;
+            if (hash.substring(0, 6) == "mailto") return;
             var target = $(hash);
             if (target.position().top <= scroll_top && target.position().top + target.outerHeight() > scroll_top) {
                 $(menu_selector + " a.active").removeClass("active");
@@ -62,12 +65,12 @@ $(document).ready(function() {
     });
 
     $(".variant_toggler").click(function(e) {
-      if($(this).hasClass("active")) return;
+        if ($(this).hasClass("active")) return;
         $(".variant").toggleClass('active');
         $(".variant_toggler").toggleClass('active');
     });
     $(".topmenu_elements").click(function(e) {
-      if(e.target.className!="topmenu_elements") return;
+        if (e.target.className != "topmenu_elements") return;
         $(".topmenu_elements").addClass("open");
     });
     $(".menu_closer").click(function(e) {
@@ -75,6 +78,16 @@ $(document).ready(function() {
     });
     $(".menu_element a").click(function(e) {
         $(".topmenu_elements").removeClass("open");
+    });
+    $(".test").click(function(e) {
+        $.post("send.php", $(this).closest("form").serialize())
+            .done(function(data) {
+                alert("Сообщение отправлено");
+                $(".layer").fadeOut();
+                
+
+
+            });
     });
 
 

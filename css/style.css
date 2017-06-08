@@ -101,8 +101,8 @@ h2 {
     font-weight: 900;
     height: 100%;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -119,8 +119,8 @@ h2 {
     margin: 0;
     height: 100%;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .topmenu_elements ul li {
@@ -338,7 +338,7 @@ h1 {
     background-color: #fff;
     padding: 20px;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     border-radius: 5px;
 }
 
@@ -458,6 +458,19 @@ h1 {
     margin: 0 0 21px;
 }
 
+#contacts .tel {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
 #contacts .email a {
     color: #000;
 }
@@ -520,8 +533,8 @@ form.send {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 .map {
@@ -584,22 +597,36 @@ textarea {
     font-size: 16px;
 }
 
+label.link {
+    display: none;
+}
+
 input:focus, textarea:focus {
     border: 1px solid #000000;
 }
 
-button {
+form button {
+    display: none;
+}
+
+.test {
     color: #ffffff;
     font-size: 18px;
     font-weight: 700;
     background-color: #e21f3d;
-    padding: 23px 0;
+    padding: 0;
     width: 166px;
     display: block;
     margin: 0 auto;
     border-radius: 40px;
     text-decoration: none;
     border: none;
+    cursor: pointer;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 textarea {
@@ -982,23 +1009,23 @@ h3 .big {
     }
     .contacts_elements.content {
         -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+        flex-wrap: wrap;
         padding: 0;
     }
     .contact_element_1 {
         -webkit-box-ordinal-group: 3;
-            -ms-flex-order: 2;
-                order: 2;
+        -ms-flex-order: 2;
+        order: 2;
         margin: 45px 0 0;
     }
-    .contact_element_2 button {
+    .contact_element_2 .test {
         margin-bottom: 40px;
     }
     .footer .content {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
         padding: 33px 0 43px;
     }
     .footer {
@@ -1007,8 +1034,8 @@ h3 .big {
     .design {
         display: block;
         -webkit-box-ordinal-group: 5;
-            -ms-flex-order: 4;
-                order: 4;
+        -ms-flex-order: 4;
+        order: 4;
     }
     .tm {
         padding: 35px 0;
@@ -1018,8 +1045,8 @@ h3 .big {
         width: 100%;
         padding-left: 0;
         -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
         right: -100%;
     }
     .mobile {

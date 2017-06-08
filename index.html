@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="bg1">
+<html class="bg1" lang="ru">
 
 <head>
     <meta charset="utf-8">
@@ -58,14 +58,14 @@
 
 
                 <div class="brand" onclick="window.scrollTo(0,10)">
-                    <img src="img/logo.png" alt="" >
-                    <div class="brand_text" >
+                    <img src="img/logo.png" alt="">
+                    <div class="brand_text">
                         анимационно-инструкторская компания
                     </div>
                 </div>
                 <div class="topmenu_elements" tabindex="1">
                     <ul>
-                      <li class="menu_closer"><img class="close_menu" src="img/cross.png" alt=""></li>
+                        <li class="menu_closer"><img class="close_menu" src="img/cross.png" alt=""></li>
                         <li class="menu_element"><a href="#descr" class="active">описание</a></li>
                         <li class="menu_element"><a href="#where">где проводим</a></li>
                         <li class="menu_element"><a href="#price">стоимость</a></li>
@@ -142,8 +142,7 @@
                         <a href="img/out/13.jpg"></a>
                         <a href="img/out/14.jpg"></a>
                         <a href="img/out/15.jpg"></a>
-                        <a href="img/out/16.jpg"></a>
-                        <a href="img/out/17.jpg"></a>
+
                     </div>
                     <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate
                         cursus a sit amet mauris. Morbi accumsan ipsum velit. </p>
@@ -226,7 +225,7 @@
         <div class="contacts_elements content">
             <div class="contact_element_1">
                 <p class="address">г. Москва, ул. Александра Солженицына,<br> дом 30, стр. 1</p>
-                <p class="tel">+ 7 925 500-74-83 <br>с 9:00 до 21:00</p>
+                <div class="tel"><div >+ 7 925 500-74-83</div> <div>с 9:00 до 21:00</div></div>
                 <p class="email"> <a href="mailto:komanda.a@yandex.ru">komanda.a@yandex.ru</a></p>
                 <div class="map">
                     <iframe src="https://api-maps.yandex.ru/frame/v1/-/CBQIzTVaTA" width="555" height="322" frameborder="0"></iframe>
@@ -234,20 +233,26 @@
             </div>
             <div class="contact_element_2 send_form">
                 <h3>Отправить заявку</h3>
-                <form class="send" action="index.html" method="post">
+                <form class="send">
                     <label>
                         Имя <br>
                       <input type="text" name="name" value="">
                   </label>
                     <label>
                       Телефон или email<br>
-                    <input type="text" name="phone" value="">
+                    <input type="text" name="email" value="">
                 </label>
                     <label>
                     Комментарий <br>
                   <textarea name="comment" ></textarea>
               </label>
+              <label class="link">
+                  Ссылка <br>
+                <input type="text" name="link" value="">
+            </label>
                     <button type="submit" name="button">Отправить</button>
+                    <span class="test">Отправить</span>
+
                 </form>
             </div>
         </div>
@@ -258,7 +263,7 @@
             <p class="slogan">анимационно-конструкторская <br> компания</p>
             <p class="design"><span class="light">Дизайн</span> – <a href="mailto:gromqo@gmail.com" class="email_link">gromqo@gmail.com</a></p>
             <p class="tm"><span><a class="light big" href="tel:+79255007483">+7 925 500-74-83</a></span><br>
-              <a href="mailto:komanda.a@yandex.ru" class="email_link">komanda.a@yandex.ru</a></p>
+                <a href="mailto:komanda.a@yandex.ru" class="email_link">komanda.a@yandex.ru</a></p>
         </div>
     </section>
     <div id="up" onclick="window.scrollTo(0,10)">
@@ -275,20 +280,25 @@
             <div id="sendme" class="contact_element_2 ">
                 <a href="#" class="close_layer"><img src="img/cross.png" alt=""></a>
                 <h3>Отправить заявку</h3>
-                <form class="send" action="index.html" method="post">
+                <form class="send">
                     <label>
                   Имя <br>
                 <input type="text" name="name" value="">
             </label>
                     <label>
                 Телефон или email <br>
-              <input type="text" name="phone" value="">
+              <input type="text" name="email" value="">
           </label>
                     <label>
               Комментарий <br>
             <textarea name="comment" ></textarea>
         </label>
+        <label class="link">
+            Ссылка <br>
+          <input type="text" name="link" value="">
+      </label>
                     <button type="submit" name="button">Отправить</button>
+                    <span class="test">Отправить</span>
                 </form>
             </div>
         </div>
