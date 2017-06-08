@@ -40,8 +40,8 @@ $(document).ready(function() {
 
     $(document).on("scroll", onScroll);
 
-    $(menu_selector + ".menu_element a").click(function(e) {
-      
+    $(menu_selector + " .menu_element a").click(function(e) {
+
         e.preventDefault();
 
         $(document).off("scroll");

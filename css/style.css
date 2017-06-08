@@ -51,6 +51,10 @@ h2 {
     text-transform: uppercase;
 }
 
+.brand {
+    cursor: pointer;
+}
+
 .brand_text {
     /* Style for "анимационн" */
     width: 197px;
@@ -74,7 +78,6 @@ h2 {
 
 .topmenu.shadow {
     -webkit-box-shadow: 0px 20px 86px -22px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 20px 86px -22px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 20px 86px -22px rgba(0, 0, 0, 0.75);
 }
 
@@ -97,7 +100,11 @@ h2 {
     font-size: 14px;
     font-weight: 900;
     height: 100%;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -111,8 +118,9 @@ h2 {
     padding: 0;
     margin: 0;
     height: 100%;
-    align-items: center;
-    padding: 50px 0 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .topmenu_elements ul li {
@@ -163,11 +171,14 @@ h2 {
     text-align: center;
 }
 
-.topmenu_contacts .email a {
+.email_link {
     height: 14px;
     color: #000000;
     font-size: 14px;
-    text-decoration: none;
+}
+
+.email_link:hover {
+    color: #f2b429;
 }
 
 h1 {
@@ -326,7 +337,8 @@ h1 {
 .slider_wrapper {
     background-color: #fff;
     padding: 20px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     border-radius: 5px;
 }
 
@@ -448,7 +460,6 @@ h1 {
 
 #contacts .email a {
     color: #000;
-    text-decoration: none;
 }
 
 #contacts .address::before, #contacts .tel::before, #contacts .email::before {
@@ -504,8 +515,13 @@ h1 {
 }
 
 form.send {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .map {
@@ -565,6 +581,7 @@ textarea {
     outline: none;
     padding: 10px;
     resize: none;
+    font-size: 16px;
 }
 
 input:focus, textarea:focus {
@@ -620,6 +637,10 @@ textarea {
 .footer a {
     color: #fff;
     text-decoration: none;
+}
+
+.footer a.email_link {
+    text-decoration: underline;
 }
 
 .slogan {
@@ -706,6 +727,10 @@ h3 .big {
     background-color: #fff;
 }
 
+.click {
+    cursor: pointer;
+}
+
 
 /*------------------------- media ---------------------------*/
 
@@ -764,6 +789,7 @@ h3 .big {
         box-sizing: border-box;
         -webkit-transition: .5s;
         transition: .5s;
+        padding: 50px 0 0 40px;
     }
     .topmenu_elements a {
         padding: 10px 0;
@@ -841,6 +867,7 @@ h3 .big {
     }
     #team {
         padding: 150px 20px 0;
+        margin-top: 0;
     }
     .contact_element_2 {
         -ms-flex-negative: 0;
@@ -865,7 +892,7 @@ h3 .big {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .topmenu_contacts, .smallheader {
         display: none;
     }
@@ -954,18 +981,24 @@ h3 .big {
         width: 230px;
     }
     .contacts_elements.content {
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         padding: 0;
     }
     .contact_element_1 {
-        order: 2;
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2;
         margin: 45px 0 0;
     }
     .contact_element_2 button {
         margin-bottom: 40px;
     }
     .footer .content {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         padding: 33px 0 43px;
     }
     .footer {
@@ -973,7 +1006,9 @@ h3 .big {
     }
     .design {
         display: block;
-        order: 4;
+        -webkit-box-ordinal-group: 5;
+            -ms-flex-order: 4;
+                order: 4;
     }
     .tm {
         padding: 35px 0;
@@ -982,7 +1017,9 @@ h3 .big {
     .topmenu_elements ul {
         width: 100%;
         padding-left: 0;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         right: -100%;
     }
     .mobile {
@@ -1022,5 +1059,8 @@ h3 .big {
     .close_layer {
         right: 5px;
         top: 5px;
+    }
+    #up {
+        display: none!important;
     }
 }
